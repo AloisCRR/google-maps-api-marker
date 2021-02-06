@@ -24,8 +24,8 @@ import { User } from "./User";
     const company = new Company();
     const customMap = new CustomMap("#map");
 
-    customMap.addUserMarker(user);
-    customMap.addCompanyMarker(company);
+    customMap.addMarkerFor(user);
+    customMap.addMarkerFor(company);
   } catch (error) {
     console.log(error);
   }

@@ -25,22 +25,12 @@ export class CustomMap {
     this.googleMap = new google.maps.Map(this.mapHtmlElement, this.mapOptions);
   }
 
-  addUserMarker(user: User) {
+  addMarkerFor(markerTo: User | Company) {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: user.location.lat,
-        lng: user.location.lon,
-      },
-    });
-  }
-
-  addCompanyMarker(company: Company) {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: company.location.lat,
-        lng: company.location.lon,
+        lat: markerTo.location.lat,
+        lng: markerTo.location.lon,
       },
     });
   }
