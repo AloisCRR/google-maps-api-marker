@@ -2,7 +2,9 @@
 // import { User } from "./User";
 
 import { Loader } from "@googlemaps/js-api-loader";
+import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
+import { User } from "./User";
 
 (async function () {
   try {
@@ -18,8 +20,13 @@ import { CustomMap } from "./CustomMap";
       ],
     }).load();
 
-    return new CustomMap("#map");
+    const user = new User();
+    const company = new Company();
+    const customMap = new CustomMap("#map");
+
+    customMap.addUserMarker(user);
+    customMap.addCompanyMarker(company);
   } catch (error) {
-    return console.log(error);
+    console.log(error);
   }
 })();
