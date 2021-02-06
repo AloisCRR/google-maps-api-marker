@@ -1,9 +1,21 @@
+dependencies:
+  '@googlemaps/js-api-loader': 1.11.1
+  faker: 5.3.1
 devDependencies:
   '@snowpack/plugin-typescript': 1.2.1_typescript@4.1.3
+  '@types/faker': 5.1.6
+  '@types/googlemaps': 3.43.2
+  '@types/snowpack-env': 2.3.3
   snowpack: 3.0.11
   typescript: 4.1.3
 lockfileVersion: 5.2
 packages:
+  /@googlemaps/js-api-loader/1.11.1:
+    dependencies:
+      fast-deep-equal: 3.1.3
+    dev: false
+    resolution:
+      integrity: sha512-2ug4uBu0onRXTAo7Yxkay5N7pdNIz3XpTElMTLdCtEfQDxikbjeR6GS8atVhblX+ubFBNlXvDzz7VtuXv0vMRQ==
   /@snowpack/plugin-typescript/1.2.1_typescript@4.1.3:
     dependencies:
       execa: 5.0.0
@@ -14,6 +26,18 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-wU+JNaMVkqGsqTaUY7TnEMhGt/3URTgA9dpMCtZX6wn/ceA7Gwlmue/sOLynf0OTNLygHPvjiQECQYkEi3LTtg==
+  /@types/faker/5.1.6:
+    dev: true
+    resolution:
+      integrity: sha512-D+gfFWR/YCvlrYL8lgNZO1jKgIUW+cfhxsgMOqUMYwCI+tl0htD7vCCXp/oJsIxJpxuI7zqmo3gpVQBkFCM4iA==
+  /@types/googlemaps/3.43.2:
+    dev: true
+    resolution:
+      integrity: sha512-qiu5rms7+bgLciKAXpRsxVB1P+Z6gbSxuO8tZfdyQV2k5e5L/7GjUI6Z69rMR+7YFmqU9vwOUglLQ6NJyP/K8g==
+  /@types/snowpack-env/2.3.3:
+    dev: true
+    resolution:
+      integrity: sha512-riJuu2fR3qhBfpWJtqQtNwYJFvquiXfqdprXvZjSNmscnZbIVyHoM49ZVEM1bciKM1mWOCdjXymOYHyGh2WLtg==
   /cross-spawn/7.0.3:
     dependencies:
       path-key: 3.1.1
@@ -46,6 +70,14 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==
+  /faker/5.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-sVdoApX/awJHO9DZHZsHVaJBNFiJW0n3lPs0q/nFxp/Mtya1dr2sCMktST3mdxNMHjkvKTTMAW488E+jH1eSbg==
+  /fast-deep-equal/3.1.3:
+    dev: false
+    resolution:
+      integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
   /fsevents/2.3.2:
     dev: true
     engines:
@@ -196,6 +228,11 @@ packages:
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
 specifiers:
+  '@googlemaps/js-api-loader': ^1.11.1
   '@snowpack/plugin-typescript': ^1.2.1
+  '@types/faker': ^5.1.6
+  '@types/googlemaps': ^3.43.2
+  '@types/snowpack-env': ^2.3.3
+  faker: ^5.3.1
   snowpack: ^3.0.11
   typescript: ^4.1.3
