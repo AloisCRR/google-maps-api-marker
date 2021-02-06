@@ -133,6 +133,7 @@ dist
 .vscode-test
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
