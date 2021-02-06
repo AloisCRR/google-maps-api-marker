@@ -1,6 +1,11 @@
-import { Loader } from "@googlemaps/js-api-loader";
-import type { Company } from "./Company";
-import type { User } from "./User";
+export interface LocationInfo {
+  location: {
+    lat: number;
+    lon: number;
+  };
+
+  infoWindowContent(): Node;
+}
 
 export class CustomMap {
   private googleMap: google.maps.Map;
@@ -25,13 +30,21 @@ export class CustomMap {
     this.googleMap = new google.maps.Map(this.mapHtmlElement, this.mapOptions);
   }
 
-  addMarkerFor(markerTo: User | Company) {
-    new google.maps.Marker({
+  addMarkerFor(markerTo: LocationInfo) {
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: markerTo.location.lat,
         lng: markerTo.location.lon,
       },
+    });
+
+    marker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: markerTo.infoWindowContent(),
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
