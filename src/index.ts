@@ -1,6 +1,3 @@
-// import { Company } from "./Company";
-// import { User } from "./User";
-
 import { Loader } from "@googlemaps/js-api-loader";
 import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
